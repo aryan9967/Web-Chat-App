@@ -1,0 +1,156 @@
+body{
+    margin:0px;
+    height:100vh;
+    width:100vw;
+}
+*{
+    box-sizing: border-box;
+    margin:0px;
+}
+h3{
+    height:100%;
+}
+.header{
+    display:block;
+    padding-top: 1vh;
+    width:100vw;
+    height: 5vh;
+    border:2px solid black;
+    border-collapse: collapse;
+    
+}
+.content{
+    width:100vw;
+    height:95vh;
+    border:2px solid black;
+    border-collapse: collapse;
+    display:flex;
+}
+.leftside{
+    width:20%;
+    height:100%;
+    border:2px solid black;
+    border-collapse: collapse;
+}
+.search{
+    height:15%;
+    width:100%;
+    border:2px solid black;
+    border-collapse: collapse;
+    padding:2%;
+}
+.search h2{
+    height:60%;
+    width:100%
+}
+.search_bar{
+    display: inline-block;
+    height:40%;
+    width:100%;
+    border: 1px solid black;
+    position: relative;
+}
+.search_bar input{
+    height:100%;
+    width:90%;
+    border:none;
+    padding: 0%;
+    margin:0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+.search_bar button{
+    padding:0px;
+    height:100%;
+    width:10%;
+    border:none;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+.chat_name{
+    width:100%;
+    height:85%;
+    overflow-y: auto;
+}
+.chat_name button{
+    display:inline-block;
+    /* border:none; */
+    width:100%;
+    height:10%;
+    padding:0px;
+    text-align: left;
+    vertical-align: top;
+}
+.rightside{
+    width:80%;
+    height:100%;
+    border:2px solid black;
+    border-collapse: collapse;
+}
+.additional_features{
+    float: right;
+}
+.profile{
+    height:8%;
+    width:100%;
+    border:1px solid black;
+}
+.messages{
+    height: 92%;
+    width: 100%;
+}
+.messages .send{
+    overflow:auto;
+    height:85%;
+    width:100%;
+    border: 1px solid black;
+
+}
+.messages .enter_area{
+    height:15%;
+    width:100%;
+    display: flex;
+}
+.msg_sent, .msg_rcvd{
+    width:10%;
+
+}
+.top img{
+    border-radius: 50%;
+    height:35px;
+    width:35px;
+    float: left;
+    object-fit: cover;
+
+}
+.enter_area .enter{
+    width:60%;
+    height:50%;
+    margin: auto;
+    position: relative;
+    border: 1px solid black;
+    
+}
+.enter input{
+    height:100%;
+    width:90%;
+    border:none;
+    padding: 0%;
+    margin:0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.enter button{
+    height:100%;
+    width:10%;
+    padding: 0%;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    border: none;
+}
