@@ -6,7 +6,7 @@ body{
 *{
     box-sizing: border-box;
     margin:0px;
-    font-size: 1vw;
+    font-size: 2vh;
     font-family: Arial, Helvetica, sans-serif;
 }
 h3{
@@ -46,7 +46,7 @@ h3{
 .search h2{
     height:55%;
     width:100%;
-    font-size: 1.7vw;
+    font-size: 3vh;
     font-weight: normal;
 }
 .search_bar{
@@ -63,16 +63,40 @@ h3{
     border-bottom: 1.5px solid black;
    
 }
-.search_bar:hover{
+.search_bar input:hover{
     transform:scale(1.04);
     transition: 0.3s;
+    border-top:1.5px solid rgb(197, 197, 197);
+    border-left:1.5px solid rgb(197, 197, 197);
+    border-right:1.5px solid rgb(197, 197, 197);
+    border-bottom: 1.5px solid black;
 }
-.search_bar:focus{
+.search_bar input:hover + button{
     transform:scale(1.04);
+    transition: 0.3s;
+    border-top:1.5px solid rgb(197, 197, 197);
+    border-left:1.5px solid rgb(197, 197, 197);
+    border-right:1.5px solid rgb(197, 197, 197);
+    border-bottom: 1.5px solid black;
 }
+.search_bar input:focus + button{
+    transform:scale(1.04);
+    transition: 0.3s;
+    border-top:1.5px solid rgb(197, 197, 197);
+    border-left:1.5px solid rgb(197, 197, 197);
+    border-right:1.5px solid rgb(197, 197, 197);
+    border-bottom: 1.5px solid black;
+}
+/* .search_bar:focus{
+    transform:scale(1.04);
+} */
 .search_bar button:hover{
     background-color: rgb(91, 220, 91);
     cursor: pointer;
+    border-top:1.5px solid rgb(197, 197, 197);
+    border-left:1.5px solid rgb(197, 197, 197);
+    border-right:1.5px solid rgb(197, 197, 197);
+    border-bottom: 1.5px solid black;
 }
 .search_bar button:active{
     background-color: rgb(71, 176, 71);
@@ -89,8 +113,11 @@ h3{
     outline:none;
     border-radius: 5px 0px 0px 5px;
     padding-left:3%;
-    font-size: 1.1vw;
+    font-size: 2vh;
     background-color: rgb(240, 240, 240);
+}
+.search_bar input:focus{
+    transform: scale(1.04);
 }
 .search_bar button{
     padding:0px;
@@ -138,13 +165,44 @@ h3{
     border-left:3px solid rgb(219, 219, 219);
     border-collapse: collapse;
 }
+
+
+.profile{
+    height:8%;
+    width:100%;
+    border-bottom:3px solid rgb(219, 219, 219) ;
+    display:flex;
+    justify-content: space-between;
+    /* border:1px solid black; */
+}
+.top_name{
+    width:90%;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5%;
+}
+img{
+    border-radius: 50%;
+    height:35px;
+    width:35px;
+    float: left;
+    object-fit: cover;
+
+}
+ .name{
+    margin-left:1%;
+    font-size: 2.5vh;
+    font-weight: bold;
+    color: rgb(42, 42, 42);
+    display: inline-block;
+}
 .additional_features{
-    display:block;
-    float: right;
     height:100%;
     border-collapse: collapse;
     width:10%;
     padding:0.5% 0%;
+
+    display: flex;
 }
 .additional_features button{
     height: 100%;
@@ -154,9 +212,11 @@ h3{
     outline: none;
     box-sizing: border-box;
     width:30%;
-    background-color: inherit;
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     cursor: pointer;
+    padding: 0%;
+    margin-right: 2%;
 }
 .additional_features button:hover{
     background-color:  rgb(223, 223, 223);
@@ -164,32 +224,6 @@ h3{
 .additional_features button:active{
     background-color: rgb(173, 173, 173);
     cursor:pointer;
-}
-.top img{
-    border-radius: 50%;
-    height:35px;
-    width:35px;
-    float: left;
-    object-fit: cover;
-
-}
-.top{
-    display:flex;
-    height:100%;
-    align-items: center;
-    padding-left: 0.5%;
-}
-.top .name{
-    margin-left:1%;
-    font-size: 1.3vw;
-    font-weight: bold;
-    color: rgb(42, 42, 42);
-}
-.profile{
-    height:8%;
-    width:100%;
-    border-bottom:3px solid rgb(219, 219, 219) ;
-    /* border:1px solid black; */
 }
 .messages{
     height: 92%;
@@ -218,6 +252,7 @@ h3{
     color: white;
     padding:0.7%;
     border-radius: 10px;
+    font-size: 2vh;
 
 }
 .msg_rcvd{
@@ -290,3 +325,92 @@ h3{
     border-radius: 10px;
   }
   
+@media (max-width:1400px){
+    .leftside{
+        width:30%;
+    }
+    .rightside{
+        width:70%;
+    }
+    .additional_features{
+        width:20%;
+    }
+    .top_name{
+        width:80%;
+    }
+    .msg_sent, .msg_rcvd{
+        max-width: 60%;
+        width:fit-content;
+        font-size: 1.8vh;
+    }
+    .search_bar input{
+        width:88%;
+    }
+    .search_bar button{
+        width:12%;
+    }
+    .enter button{
+        width:6%;
+    }
+}
+@media (max-width:992px){
+    .leftside{
+        width:36%;
+    }
+    .rightside{
+        width:64%;
+    }
+    .msg_sent, .msg_rcvd{
+        max-width: 80%;
+        width:fit-content;
+        font-size: 1.7vh;
+    }
+    .search_bar input{
+        width:87%;
+    }
+    .search_bar button{
+        width:13%;
+    }
+    .msg_rcvd{
+        margin-bottom: 1.5%;
+    }
+    .positioning{
+        margin-bottom: 1.5%;
+    }
+    .additional_features{
+        width:25%;
+    }
+    .top_name{
+        width:75%;
+    }
+    .enter button{
+        width:7%;
+    }
+    .messages .send{
+        padding:0.7% 3% 0%;
+    }
+    .messages .send{
+        background: url("images/background_chat.jpg");
+        background-size: cover;
+        
+    }
+    .search{
+        height:12%;
+    }
+    .chat_name{
+        height:88%;
+    }
+    .chat_name button{
+        height:8%;
+    }
+}
+@media (max-width:600px)
+{
+    .rightside{
+        display: none;
+    }
+    .leftside{
+        display: block;
+        width:100%;
+    }
+}
